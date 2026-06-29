@@ -1,0 +1,3131 @@
+{
+  "name": "Telegram Bot Ksu",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message",
+          "callback_query"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -896,
+        480
+      ],
+      "id": "b9c9b020-1cb0-4414-85dc-e1a6004f2a24",
+      "name": "Telegram Trigger",
+      "webhookId": "ba6fab76-55df-4a68-9cdf-7385c787f999",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "19640670-b001-4a90-aaba-2c4cf6f75a30",
+                    "leftValue": "={{$json.message.text}}",
+                    "rightValue": "/start",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "buy_guide",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "fd4f2b50-e107-4785-b642-013b8fb591bd"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "f7ee7fa2-96be-4231-914a-5fdae5e04a65",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "mini_test",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "8040f6c6-0c7e-4f4d-82a0-ac076a20cc6e",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "guides",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "ffe8a3ca-a6ab-459e-b22a-ba0a5305a275",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "problem_weight",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "5d046960-395d-4b63-a3dc-0eb3b027eb94",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "problem_overeat",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "4cca8421-ebff-454e-bfa4-b8a83b5cd2e0",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "problem_sweet",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "95ff43ea-c4e1-4031-abd7-cc67f94cf5bd",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "problem_bloat",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "79402409-43f2-4481-b391-c05dc54585b7",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "problem_food",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "9958c590-6991-47b6-8b38-933739b7622f",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "problem_shape",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "26f754f7-8511-41b5-93d2-73692d6c7770",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "meal_regular",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "c717c05a-7336-40d3-9ce5-fe06075582d1",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "meal_rare",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "b9e889e0-614f-4dba-ad5e-a5ca93ce6eaa",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "meal_snacks",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "f323c0ac-a898-4838-b144-4d492bf6e48a",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "meal_random",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "82cfad90-7b62-462b-adb5-d193b575207a",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "meal_no_regime",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "6a30e811-bccb-40bd-906b-d989920e8f51",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "activity_regular",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "219fa7af-1e7a-4706-93b3-4e0ef586b03e",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "activity_sometimes",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "e00b387a-1c47-4c2c-ada1-58d07a1313c3",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "activity_none",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "71e66f56-bb2b-4fd5-a583-86e7c3259f5e",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "goal_weight_loss",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "35d58990-bb83-4542-ac19-bcb154013580",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "goal_shape",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "dca1d678-c843-47da-846e-c6d5a9dc6340",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "goal_health",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "21dcc473-0c46-402b-aece-a3bc238add59",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "goal_sweets",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "05c988bb-10c0-4c78-b689-b94bfa16069b",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "goal_unsure",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "dd4b2306-4c05-4a08-8959-185a001ec64e",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "menu",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "76a0e1b7-c064-4b0c-b122-48219f1b0c11",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "personal_support",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "be0801be-11cf-4961-83e6-93a7d82b2426",
+                    "leftValue": "={{$json.message.text}}",
+                    "rightValue": "ЗАЯВКА:",
+                    "operator": {
+                      "type": "string",
+                      "operation": "startsWith"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "38e8a167-e667-4374-b771-d3f8d9beeb13",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "about",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "0ee6e741-13b5-4137-a1a7-becb4e94447b",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "pay_guide",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "c9865980-f9c6-41ec-8957-7c6947996b67",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "support_form_start",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "065c7c04-5435-48e5-b08b-1a91b34da988",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "consultation",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "6f2e3293-3bed-4869-be46-4c2c5a3b25f0",
+                    "leftValue": "={{$json.callback_query.data}}",
+                    "rightValue": "consultation_agree",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "eb5b17a1-5492-4e35-88c9-bf7ea1a2e738",
+                    "leftValue": "={{ $json.message.text }}",
+                    "rightValue": "КОНСУЛЬТАЦИЯ:",
+                    "operator": {
+                      "type": "string",
+                      "operation": "startsWith"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -672,
+        0
+      ],
+      "id": "367f2481-0fb0-45e2-a67c-c75434ac3dc1",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "chatId": "={{$json.callback_query.message.chat.id}}",
+        "text": "📚 Доступные гайды\n\nСкоро здесь появится список всех материалов.",
+        "replyMarkup": "inlineKeyboard",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        176,
+        16
+      ],
+      "id": "da5f0be9-fcfe-43ff-9948-cf50cc095257",
+      "name": "Send Mssage (доступные гайды)",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.message?.chat?.id || $json.callback_query?.message?.chat?.id }}",
+        "text": "👋 Привет!\n\nЯ КсюБот — помощник Ксюши Васильковой 🤍\n\nПомогаю сделать питание понятным, вкусным и без жёстких запретов.\n\nЗдесь ты можешь:\n\n📝 пройти мини-тест и получить рекомендации;\n📖 купить гайд;\n💬 узнать подробнее о консультации и личном сопровождении;\n📚 посмотреть доступные материалы;\n👩‍💻 познакомиться с Ксюшей.\n\n👇 Выбери, с чего хочешь начать.",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📝 Получить рекомендации",
+                    "additionalFields": {
+                      "callback_data": "mini_test"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📖 Купить гайд",
+                    "additionalFields": {
+                      "callback_data": "buy_guide"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "💬 Личное сопровождение",
+                    "additionalFields": {
+                      "callback_data": "personal_support"
+                    }
+                  },
+                  {
+                    "text": "📞 Консультация",
+                    "additionalFields": {
+                      "callback_data": "consultation"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📚 Доступные гайды",
+                    "additionalFields": {
+                      "callback_data": "guides"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "👩‍💻 Обо мне",
+                    "additionalFields": {
+                      "callback_data": "about"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        176,
+        -496
+      ],
+      "id": "0ef0aa23-1ffb-43f7-a34d-2e02d49f289d",
+      "name": "Send Message (Главное меню)",
+      "webhookId": "e24ba8db-1bf3-4746-9593-ee9922ecc5d2",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{$json.callback_query.message.chat.id}}",
+        "text": "📝 Мини-тест по питанию\n\nОтветь на несколько вопросов, чтобы я мог подобрать для тебя рекомендации.\n\nВопрос 1 из 4\n\nЧто сейчас беспокоит больше всего?",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "⚖️ Не могу похудеть",
+                    "additionalFields": {
+                      "callback_data": "problem_weight"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🍰 Часто переедаю",
+                    "additionalFields": {
+                      "callback_data": "problem_overeat"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🍫 Не могу отказаться от сладкого",
+                    "additionalFields": {
+                      "callback_data": "problem_sweet"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🤰 Постоянное вздутие",
+                    "additionalFields": {
+                      "callback_data": "problem_bloat"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🥗 Не понимаю, как правильно питаться",
+                    "additionalFields": {
+                      "callback_data": "problem_food"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "💪 Хочу улучшить фигуру без диет",
+                    "additionalFields": {
+                      "callback_data": "problem_shape"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        176,
+        -144
+      ],
+      "id": "1abec381-8091-42a4-adb4-fb0d2f32b028",
+      "name": "Тест_Вопрос1_Проблема",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json[\"Telegram ID\"] }}",
+        "text": "🥗 Вопрос 2 из 4\n\nКак сейчас чаще всего выглядит твой режим питания?",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🍳 Завтракаю, обедаю и ужинаю",
+                    "additionalFields": {
+                      "callback_data": "meal_regular"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🥪 Ем 1–2 раза в день",
+                    "additionalFields": {
+                      "callback_data": "meal_rare"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🍫 Постоянно перекусываю",
+                    "additionalFields": {
+                      "callback_data": "meal_snacks"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🍽️ Каждый день по-разному",
+                    "additionalFields": {
+                      "callback_data": "meal_random"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🤷 Не обращаю внимания на режим",
+                    "additionalFields": {
+                      "callback_data": "meal_no_regime"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        176,
+        176
+      ],
+      "id": "4ceb86ea-6666-4499-aabb-88ef5bc153a3",
+      "name": "Тест_Вопрос2_Питание",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json[\"Telegram ID\"] }}",
+        "text": " 🏃 Вопрос 3 из 4\n\nЕсть ли у вас регулярная физическая активность?",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "💪 Да, тренируюсь регулярно",
+                    "additionalFields": {
+                      "callback_data": "activity_regular"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🚶 Иногда гуляю или занимаюсь",
+                    "additionalFields": {
+                      "callback_data": "activity_sometimes"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "😴 Практически нет активности",
+                    "additionalFields": {
+                      "callback_data": "activity_none"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        176,
+        336
+      ],
+      "id": "3f3c2e0f-6850-4af2-9ae5-aa74428fc7ad",
+      "name": "Тест_Вопрос3_Активность",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json[\"Telegram ID\"] }}",
+        "text": "🎯 Вопрос 4 из 4\n\nКакая цель сейчас для вас наиболее важна?",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "⚖️ Похудеть",
+                    "additionalFields": {
+                      "callback_data": "goal_weight_loss"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "💪 Улучшить форму и подтянуть тело",
+                    "additionalFields": {
+                      "callback_data": "goal_shape"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🌿 Наладить питание и самочувствие",
+                    "additionalFields": {
+                      "callback_data": "goal_health"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🍰 Перестать срываться на сладкое",
+                    "additionalFields": {
+                      "callback_data": "goal_sweets"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🤔 Пока не уверен(а)",
+                    "additionalFields": {
+                      "callback_data": "goal_unsure"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        176,
+        496
+      ],
+      "id": "14e58eee-1942-4082-be36-e05c565387b8",
+      "name": "Тест_Вопрос4_Цель",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json[\"Telegram ID\"] }}",
+        "text": "={{ $('AI_Результат_мини_теста').item.json.output[0].content[0].text }}\n\n🤍 Если хочешь получить персональный план действий, подробный разбор питания и мою поддержку на каждом этапе — я буду рада помочь тебе в личном сопровождении.\n\n👇 Выбери, что интересно:",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🥗 Узнать про сопровождение",
+                    "additionalFields": {
+                      "callback_data": "personal_support"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "🏠 Главное меню",
+                    "additionalFields": {
+                      "callback_data": "menu"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        624,
+        656
+      ],
+      "id": "f9b844a6-4935-4165-955b-2d9dc1ff6e19",
+      "name": "Тест_Результат",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.message?.chat?.id || $json.callback_query?.message?.chat?.id }}",
+        "text": "💬 Личное сопровождение\n\nЭто формат для тех, кто хочет не просто получить рекомендации, а постепенно выстроить питание под себя — без жёстких диет, запретов и чувства вины.\n\nВ сопровождении Ксюша помогает:\n\n🤍 разобраться с текущим рационом;\n🥗 наладить питание без крайностей;\n🍰 вписать любимые продукты без срывов;\n📌 сформировать понятные привычки;\n💬 получать поддержку в процессе.\n\nЧтобы понять, подойдёт ли тебе этот формат, заполни небольшую анкету.",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📝 Заполнить анкету",
+                    "additionalFields": {
+                      "callback_data": "support_form_start"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "⬅️ Главное меню",
+                    "additionalFields": {
+                      "callback_data": "menu"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -224,
+        816
+      ],
+      "id": "21887f33-5a74-4c83-a801-4293ce6bf1e9",
+      "name": "Сопровождение",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE",
+          "mode": "list",
+          "cachedResultName": "Ksu_Vasilek_Bot_CRM",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1038518653,
+          "mode": "list",
+          "cachedResultName": "CRM_DATA",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit#gid=1038518653"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Username": "={{ $json.message.from.username }}",
+            "Имя": "={{ $json.message.from.first_name }}",
+            "Telegram ID": "={{ $json.message.from.id }}",
+            "Источник": "Telegram",
+            "Client Stage": "={{ $json.message.text.startsWith('КОНСУЛЬТАЦИЯ:') ? 'Подал заявку на консультацию' : 'Подал заявку на сопровождение' }}",
+            "Последнее действие": "={{ $json.message.text }}",
+            "Тип обращения": "={{ $json.message.text.startsWith('КОНСУЛЬТАЦИЯ:') ? 'Консультация' : 'Сопровождение' }}",
+            "Возраст": "={{ $json.message.text.match(/(\\d+)\\s*лет/)?.[1] }}",
+            "Рост": "={{ $json.message.text.match(/Рост\\s*(\\d+)/i)?.[1] }}",
+            "Вес": "={{ $json.message.text.match(/вес\\s*(\\d+)/i)?.[1] }}",
+            "Цель": "={{ $json.message.text.match(/Хочу\\s*(.+)/i)?.[1] }}",
+            "Телефон": "={{ $json.message.text.match(/Телефон:\\s*(.+)/)?.[1] || '' }}",
+            "Комментарий Ксении": "="
+          },
+          "matchingColumns": [
+            "Telegram ID"
+          ],
+          "schema": [
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Дата создания",
+              "displayName": "Дата создания",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Telegram ID",
+              "displayName": "Telegram ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Username",
+              "displayName": "Username",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Имя",
+              "displayName": "Имя",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Телефон",
+              "displayName": "Телефон",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Источник",
+              "displayName": "Источник",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Client Stage",
+              "displayName": "Client Stage",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Тип обращения",
+              "displayName": "Тип обращения",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Последнее действие",
+              "displayName": "Последнее действие",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Комментарий Ксении",
+              "displayName": "Комментарий Ксении",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Возраст",
+              "displayName": "Возраст",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Рост",
+              "displayName": "Рост",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Вес",
+              "displayName": "Вес",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Цель",
+              "displayName": "Цель",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -224,
+        960
+      ],
+      "id": "c1fbed17-dd83-4ea2-b73c-26172885a68e",
+      "name": "CRM_Новая_заявка",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Eivko9Evu6CWdbOw",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "=61112247",
+        "text": "=📥 Новая заявка\n\n👤 Имя: {{ $('CRM_Новая_заявка').item.json['Имя'] }}\n\n📱 Telegram: @{{ $('CRM_Новая_заявка').item.json['Username'] }}\n\n🎂 Возраст: {{ $('CRM_Новая_заявка').item.json['Возраст'] }}\n📏 Рост: {{ $('CRM_Новая_заявка').item.json['Рост'] }}\n⚖️ Вес: {{ $('CRM_Новая_заявка').item.json['Вес'] }}\n\n🎯 Цель:\n{{ $('CRM_Новая_заявка').item.json['Цель'] }}\n\n💬 Сообщение:\n{{ $('CRM_Новая_заявка').item.json['Последнее действие'] }}\n\n━━━━━━━━━━━━\n\n{{ $('Message a model').item.json.output[0].content[0].text }}",
+        "replyMarkup": "inlineKeyboard",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        304,
+        880
+      ],
+      "id": "6b11c6be-0693-413f-83d2-14c56c308be0",
+      "name": "Уведомление_Ксюше",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "chat-latest",
+          "mode": "list",
+          "cachedResultName": "CHAT-LATEST"
+        },
+        "responses": {
+          "values": [
+            {
+              "content": "=Проанализируй заявку клиента для фитнес-нутрициолога.\n\nЗаявка:\n{{ $json[\"Последнее действие\"] }}\n\nВерни ответ строго в формате:\n\n📋 AI-анализ\n\n🎯 Главная цель:\n...\n\n⚠️ Основная проблема:\n...\n\n❓ Что стоит уточнить:\n- пункт 1\n- пункт 2\n- пункт 3\n\n💡 Рекомендация для первого контакта:\n..."
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 2.3,
+      "position": [
+        0,
+        880
+      ],
+      "id": "b658ee69-7c56-44e4-859e-9235edbce5bc",
+      "name": "Message a model",
+      "credentials": {
+        "openAiApi": {
+          "id": "ytkHTB1LW76JmcPe",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json[\"Telegram ID\"] }}",
+        "text": "=Спасибо! 💌\n\nТвоя заявка успешно отправлена.\n\nЯ внимательно изучу анкету и свяжусь с тобой в ближайшее время.\n\nДо связи!\nКсю Василёк 🌿",
+        "replyMarkup": "inlineKeyboard",
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        1008
+      ],
+      "id": "dde77671-9975-4b38-8f21-85accdc3c966",
+      "name": "Сообщение_клиенту",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "chat-latest",
+          "mode": "list",
+          "cachedResultName": "CHAT-LATEST"
+        },
+        "responses": {
+          "values": [
+            {
+              "content": "=Ты — помощник фитнес-нутрициолога Ксении Васильковой.\n\nНа основе ответов пользователя сформируй короткую персональную рекомендацию.\n\nОтвет должен содержать:\n\n🎯 Что сейчас может быть основной причиной сложности.\n\n💡 С чего стоит начать в первую очередь.\n\n👉 Какой формат работы подойдёт лучше:\n\n* гайд;\n* консультация;\n* личное сопровождение.\n\nВажно:\n\n* не ставь диагнозы;\n* не назначай лечение;\n* не рекомендуй препараты;\n* не составляй лечебные диеты;\n* рекомендации должны быть общими и безопасными.\n\nВ конце обязательно добавь:\n\n⚠️ Данная информация носит ознакомительный характер и не является медицинской консультацией.\n\nОтветы пользователя:\n\nПроблема: {{ $json.Проблема }}\n\nПитание: {{ $json.Питание }}\n\nАктивность: {{ $json.Активность }}\n\nЦель: {{ $json.Цель }}"
+            }
+          ]
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 2.3,
+      "position": [
+        176,
+        656
+      ],
+      "id": "3d077ef5-18b7-4cc4-bfb6-6acb01c0acca",
+      "name": "AI_Результат_мини_теста",
+      "credentials": {
+        "openAiApi": {
+          "id": "ytkHTB1LW76JmcPe",
+          "name": "OpenAI account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE",
+          "mode": "list",
+          "cachedResultName": "Ksu_Vasilek_Bot_CRM",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1096778978,
+          "mode": "list",
+          "cachedResultName": "CRM_Мини_тест",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit#gid=1096778978"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ID теста": "={{ Date.now() }}",
+            "Дата": "={{ $now }}",
+            "Telegram ID": "={{ $('Тест_Сессии_Цель').item.json['Telegram ID'] }}",
+            "Username": "={{ $('Telegram Trigger').item.json.callback_query.from.username }}",
+            "Имя": "={{ $('Telegram Trigger').item.json.callback_query.from.first_name }}",
+            "Проблема": "={{ $('Получить_Тест_Сессию').item.json['Проблема'] }}",
+            "Питание": "={{ $('Получить_Тест_Сессию').item.json['Питание'] }}",
+            "Активность": "={{ $('Получить_Тест_Сессию').item.json['Активность'] }}",
+            "Цель": "={{ $('Тест_Сессии_Цель').item.json['Цель'] }}",
+            "AI-анализ": "={{ $('AI_Результат_мини_теста').item.json.output[0].content[0].text }}"
+          },
+          "matchingColumns": [
+            "ID теста"
+          ],
+          "schema": [
+            {
+              "id": "ID теста",
+              "displayName": "ID теста",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Дата",
+              "displayName": "Дата",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Telegram ID",
+              "displayName": "Telegram ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Username",
+              "displayName": "Username",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Имя",
+              "displayName": "Имя",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Проблема",
+              "displayName": "Проблема",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Питание",
+              "displayName": "Питание",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Активность",
+              "displayName": "Активность",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Цель",
+              "displayName": "Цель",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "AI-анализ",
+              "displayName": "AI-анализ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Рекомендованный формат",
+              "displayName": "Рекомендованный формат",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        464,
+        656
+      ],
+      "id": "2a9c0dde-72b7-499c-af1c-b3180dd8aa66",
+      "name": "CRM_Мини_тест",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Eivko9Evu6CWdbOw",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE",
+          "mode": "list",
+          "cachedResultName": "Ksu_Vasilek_Bot_CRM",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 885444869,
+          "mode": "list",
+          "cachedResultName": "Тест_Сессии",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit#gid=885444869"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Telegram ID": "={{ $json.callback_query.from.id }}",
+            "Проблема": "={{\n{\n\"problem_weight\": \"Не могу похудеть\",\n\"problem_overeat\": \"Часто переедаю\",\n\"problem_sweet\": \"Не могу отказаться от сладкого\",\n\"problem_bloat\": \"Постоянное вздутие\",\n\"problem_food\": \"Не понимаю, как правильно питаться\",\n\"problem_shape\": \"Хочу улучшить фигуру без диет\"\n}[$json.callback_query.data]\n}}",
+            "Дата": "={{ $now }}"
+          },
+          "matchingColumns": [
+            "Telegram ID"
+          ],
+          "schema": [
+            {
+              "id": "Telegram ID",
+              "displayName": "Telegram ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Проблема",
+              "displayName": "Проблема",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Питание",
+              "displayName": "Питание",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Активность",
+              "displayName": "Активность",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Цель",
+              "displayName": "Цель",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Дата",
+              "displayName": "Дата",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        0,
+        176
+      ],
+      "id": "9099c0e0-6c37-41b1-946b-ece0d02ec265",
+      "name": "Тест_Сессии_Проблема",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Eivko9Evu6CWdbOw",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE",
+          "mode": "list",
+          "cachedResultName": "Ksu_Vasilek_Bot_CRM",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 885444869,
+          "mode": "list",
+          "cachedResultName": "Тест_Сессии",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit#gid=885444869"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Telegram ID": "={{ $json.callback_query.from.id }}",
+            "Питание": "={{\n{\n\"meal_regular\": \"Завтракаю, обедаю и ужинаю\",\n\"meal_rare\": \"Ем 1–2 раза в день\",\n\"meal_snacks\": \"Постоянно перекусываю\",\n\"meal_random\": \"Каждый день по-разному\",\n\"meal_no_regime\": \"Не обращаю внимания на режим\"\n}[$json.callback_query.data]\n}}"
+          },
+          "matchingColumns": [
+            "Telegram ID"
+          ],
+          "schema": [
+            {
+              "id": "Telegram ID",
+              "displayName": "Telegram ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Проблема",
+              "displayName": "Проблема",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Питание",
+              "displayName": "Питание",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Активность",
+              "displayName": "Активность",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Цель",
+              "displayName": "Цель",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Дата",
+              "displayName": "Дата",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        0,
+        336
+      ],
+      "id": "0b42deb6-324a-42b2-ab16-c7b04a51f5f7",
+      "name": "Тест_Сессии_Питание",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Eivko9Evu6CWdbOw",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE",
+          "mode": "list",
+          "cachedResultName": "Ksu_Vasilek_Bot_CRM",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 885444869,
+          "mode": "list",
+          "cachedResultName": "Тест_Сессии",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit#gid=885444869"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Telegram ID": "={{ $json.callback_query.from.id }}",
+            "Активность": "={{\n{\n\"activity_regular\": \"Да, тренируюсь регулярно\",\n\"activity_sometimes\": \"Иногда гуляю или занимаюсь\",\n\"activity_none\": \"Практически нет активности\"\n}[$json.callback_query.data]\n}}"
+          },
+          "matchingColumns": [
+            "Telegram ID"
+          ],
+          "schema": [
+            {
+              "id": "Telegram ID",
+              "displayName": "Telegram ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Проблема",
+              "displayName": "Проблема",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Питание",
+              "displayName": "Питание",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Активность",
+              "displayName": "Активность",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Цель",
+              "displayName": "Цель",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Дата",
+              "displayName": "Дата",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        0,
+        496
+      ],
+      "id": "9decf500-21a2-4b02-84d4-5206c68ca445",
+      "name": "Тест_Сессии_Активность",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Eivko9Evu6CWdbOw",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE",
+          "mode": "list",
+          "cachedResultName": "Ksu_Vasilek_Bot_CRM",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 885444869,
+          "mode": "list",
+          "cachedResultName": "Тест_Сессии",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit#gid=885444869"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Telegram ID": "={{ $json.callback_query.from.id }}",
+            "Цель": "={{\n{\n\"goal_weight_loss\": \"Похудеть\",\n\"goal_shape\": \"Улучшить форму и подтянуть тело\",\n\"goal_health\": \"Наладить питание и самочувствие\",\n\"goal_sweets\": \"Перестать срываться на сладкое\",\n\"goal_unsure\": \"Пока не уверен(а)\"\n}[$json.callback_query.data]\n}}"
+          },
+          "matchingColumns": [
+            "Telegram ID"
+          ],
+          "schema": [
+            {
+              "id": "Telegram ID",
+              "displayName": "Telegram ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Проблема",
+              "displayName": "Проблема",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Питание",
+              "displayName": "Питание",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Активность",
+              "displayName": "Активность",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Цель",
+              "displayName": "Цель",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Дата",
+              "displayName": "Дата",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -224,
+        656
+      ],
+      "id": "a2927c3e-c8f0-4a5a-a390-ffaedaca764c",
+      "name": "Тест_Сессии_Цель",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Eivko9Evu6CWdbOw",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE",
+          "mode": "list",
+          "cachedResultName": "Ksu_Vasilek_Bot_CRM",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 885444869,
+          "mode": "list",
+          "cachedResultName": "Тест_Сессии",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit#gid=885444869"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Telegram ID",
+              "lookupValue": "={{ $('Тест_Сессии_Цель').item.json['Telegram ID'] }}"
+            }
+          ]
+        },
+        "options": {
+          "returnFirstMatch": true
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        0,
+        656
+      ],
+      "id": "aad8c0d4-26e6-4aad-bf33-bd0d93b8158d",
+      "name": "Получить_Тест_Сессию",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Eivko9Evu6CWdbOw",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "={{ $json.message?.chat?.id || $json.callback_query?.message?.chat?.id }}",
+        "file": "AgACAgIAAxkBAAIBFmo-e8UgfmeP2-UrhXa7NOq7UgWFAALMG2sb_Wr4SbdcvqvmptLmAQADAgADeQADPAQ",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📷 Instagram",
+                    "additionalFields": {
+                      "url": "https://www.instagram.com/ksu_vasilek"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "📢 Telegram-канал",
+                    "additionalFields": {
+                      "url": "https://t.me/ksu_vasilkova"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "⬅️ Главное меню",
+                    "additionalFields": {
+                      "callback_data": "menu"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "caption": "🤍 Привет!\n\nЯ — Ксюша Василькова, фитнес-нутрициолог.\n\nПомогаю похудеть без жёстких диет, запретов и чувства вины перед едой.\n\nЯ убеждена, что любимые продукты не нужно исключать из рациона. Гораздо важнее выстроить привычки, которые останутся с тобой надолго.\n\nЗдесь ты можешь:\n\n📖 изучить мои гайды;\n📝 пройти мини-тест и получить рекомендации;\n💬 узнать подробнее о личном сопровождении;\n📚 найти полезные материалы по питанию.\n\nБуду рада помочь тебе сделать путь к своей цели спокойным и комфортным 🤍"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -224,
+        1120
+      ],
+      "id": "c2401772-d86a-4b1f-9127-c95bd180ab29",
+      "name": "Send Message (Обо мне)",
+      "webhookId": "e24ba8db-1bf3-4746-9593-ee9922ecc5d2",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "={{ $json.message?.chat?.id || $json.callback_query?.message?.chat?.id }}",
+        "file": "AgACAgIAAxkBAAIBJWo_Tj-X-4atNf8kjVWYjHXKO5lXAAKwF2sb_WoAAUoxpIUaz8gYegEAAwIAA3kAAzwE",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "💳 Купить за 1290 ₽",
+                    "additionalFields": {
+                      "callback_data": "pay_guide"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "⬅️ Главное меню",
+                    "additionalFields": {
+                      "callback_data": "menu"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "caption": "📖 Гайд «Как есть любимую еду и не набирать вес»\n\nЕсли ты устал(а) от постоянных запретов, жёстких диет и чувства вины после сладкого — этот гайд для тебя 🤍\n\nВнутри ты найдёшь:\n\n✅ как худеть без отказа от любимой еды;\n✅ как правильно собрать рацион;\n✅ почему строгие ограничения не работают;\n✅ простые рекомендации, которые легко внедрить в жизнь.\n\n💰 Стоимость — 1290 ₽"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        176,
+        -320
+      ],
+      "id": "b0a0d9c9-74e7-44f5-945f-97b19568abe4",
+      "name": "Send Message (Купить гайд)",
+      "webhookId": "e24ba8db-1bf3-4746-9593-ee9922ecc5d2",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE",
+          "mode": "list",
+          "cachedResultName": "Ksu_Vasilek_Bot_CRM",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 180492283,
+          "mode": "list",
+          "cachedResultName": "CRM_Покупки",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11t1rgC3YxkiMkQCMheuyZxJsMCB_NvkelAZXWek9GLE/edit#gid=180492283"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ID покупки": "={{ Date.now() }}",
+            "Дата": "={{ $now }}",
+            "Telegram ID": "={{ $('Telegram Trigger').item.json.callback_query.from.id }}",
+            "Username": "={{ $('Telegram Trigger').item.json.callback_query.from.username }}",
+            "Имя": "={{ $('Telegram Trigger').item.json.callback_query.from.first_name }}",
+            "Продукт": "Гайд \"Как есть любимую еду и не набирать вес\"",
+            "Стоимость": "1290",
+            "Статус": "Оплачено (тест)",
+            "Способ оплаты": "Тестовый режим"
+          },
+          "matchingColumns": [
+            "Telegram ID"
+          ],
+          "schema": [
+            {
+              "id": "ID покупки",
+              "displayName": "ID покупки",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Дата",
+              "displayName": "Дата",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Telegram ID",
+              "displayName": "Telegram ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Username",
+              "displayName": "Username",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Имя",
+              "displayName": "Имя",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Продукт",
+              "displayName": "Продукт",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Стоимость",
+              "displayName": "Стоимость",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Статус",
+              "displayName": "Статус",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Способ оплаты",
+              "displayName": "Способ оплаты",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -224,
+        1280
+      ],
+      "id": "439fad6a-a325-4b75-95e2-ba2e583c6d29",
+      "name": "CRM_Покупки",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Eivko9Evu6CWdbOw",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "sendDocument",
+        "chatId": "={{ $('Telegram Trigger').item.json.callback_query.message.chat.id }}",
+        "file": "BQACAgIAAxkBAAIBLmpAKkUJccw_4ERItZnVPu7rwaaUAAJKnQACKo8BSpvLchktoJlmPAQ",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "💬 Личное сопровождение",
+                    "additionalFields": {
+                      "callback_data": "personal_support"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "⬅️ Главное меню",
+                    "additionalFields": {
+                      "callback_data": "menu"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -64,
+        1280
+      ],
+      "id": "375a2c51-85bf-4a6c-819c-a6987d9e0402",
+      "name": "Отправить_PDF_гайд",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.callback_query.message.chat.id }}",
+        "text": "📝 Анкета для личного сопровождения\n\nСкопируй шаблон ниже, заполни его и отправь одним сообщением.\n\nВажно: сообщение должно начинаться со слова ЗАЯВКА:\n\nЗАЯВКА:\n\nИмя:\nВозраст:\nРост:\nВес:\nЦель:\nЧто сейчас больше всего мешает:\nЕсть ли тренировки:\nЕсть ли особенности здоровья / рекомендации врача:\nТелефон или Telegram:",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {},
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "⬅️ Главное меню",
+                    "additionalFields": {
+                      "callback_data": "menu"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -224,
+        1424
+      ],
+      "id": "ed5a89f8-494a-4856-bf81-7afe3bb71050",
+      "name": "Сопровождение_Имя",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.callback_query.message.chat.id }}",
+        "text": "📞 Консультация\n\nЭто разовый формат для тех, кто хочет разобрать свою ситуацию, получить понятные рекомендации и понять, с чего начать.\n\nПеред заполнением анкеты нужно подтвердить согласие на обработку персональных данных.\n\nНажимая кнопку ниже, ты соглашаешься на обработку данных, которые укажешь в анкете.",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {},
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "✅ Согласен(на), заполнить анкету",
+                    "additionalFields": {
+                      "callback_data": "consultation_agree"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "⬅️ Главное меню",
+                    "additionalFields": {
+                      "callback_data": "menu"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -224,
+        1568
+      ],
+      "id": "7aecd69b-7183-468e-96b8-c018c7d59a65",
+      "name": "Консультация",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $json.callback_query.message.chat.id }}",
+        "text": "📝 Анкета для консультации\n\nСкопируй шаблон ниже, заполни его и отправь одним сообщением.\n\nВажно: сообщение должно начинаться со слова:\n\nКОНСУЛЬТАЦИЯ:\n\nКОНСУЛЬТАЦИЯ:\n\nИмя:\nВозраст:\nРост:\nВес:\n\nГлавная цель обращения:\n\nЧто сейчас беспокоит больше всего:\n\nЧто уже пробовал(а):\n\nЕсть ли тренировки:\n\nЕсть ли особенности здоровья или рекомендации врача:\n\nТелефон или Telegram: ",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {},
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "⬅️ Главное меню",
+                    "additionalFields": {
+                      "callback_data": "menu"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -224,
+        1712
+      ],
+      "id": "1e801be3-8035-41f5-978a-37f5213588d9",
+      "name": "Консультация_Анкета",
+      "webhookId": "c6c511e1-5ab1-45c9-9798-058d491ba69f",
+      "credentials": {
+        "telegramApi": {
+          "id": "KNNFS74qgC4NU6ri",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Send Message (Главное меню)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Message (Купить гайд)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Вопрос1_Проблема",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Mssage (доступные гайды)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Проблема",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Проблема",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Проблема",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Проблема",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Проблема",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Проблема",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Питание",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Питание",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Питание",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Питание",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Питание",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Активность",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Активность",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Активность",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Цель",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Цель",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Цель",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Цель",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Тест_Сессии_Цель",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Message (Главное меню)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Сопровождение",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "CRM_Новая_заявка",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Message (Обо мне)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "CRM_Покупки",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Сопровождение_Имя",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Консультация",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Консультация_Анкета",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "CRM_Новая_заявка",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CRM_Новая_заявка": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Сообщение_клиенту",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Уведомление_Ксюше",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI_Результат_мини_теста": {
+      "main": [
+        [
+          {
+            "node": "CRM_Мини_тест",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Тест_Сессии_Проблема": {
+      "main": [
+        [
+          {
+            "node": "Тест_Вопрос2_Питание",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Тест_Сессии_Питание": {
+      "main": [
+        [
+          {
+            "node": "Тест_Вопрос3_Активность",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Тест_Сессии_Цель": {
+      "main": [
+        [
+          {
+            "node": "Получить_Тест_Сессию",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Тест_Сессии_Активность": {
+      "main": [
+        [
+          {
+            "node": "Тест_Вопрос4_Цель",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CRM_Мини_тест": {
+      "main": [
+        [
+          {
+            "node": "Тест_Результат",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Получить_Тест_Сессию": {
+      "main": [
+        [
+          {
+            "node": "AI_Результат_мини_теста",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CRM_Покупки": {
+      "main": [
+        [
+          {
+            "node": "Отправить_PDF_гайд",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "34a6e522-9036-4b07-9d8d-4f1b6f714697",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "af1fbef737dd5e66a52e5c6669a86138305ce91bdf426f8de55aa755190d3078"
+  },
+  "nodeGroups": [],
+  "id": "nXpKowUlxUPV6AIw",
+  "tags": []
+}
